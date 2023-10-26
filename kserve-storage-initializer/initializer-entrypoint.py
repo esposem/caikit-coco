@@ -15,4 +15,6 @@ dest_path = sys.argv[2]
 logging.info("Initializing, args: src_uri [%s] dest_path[ [%s]" % (src_uri, dest_path))
 Storage.download(src_uri, dest_path)
 
-subprocess.check_output(['/bin/bash', 'decrypt.sh'])
+logging.info("decrypting the model...")
+out = subprocess.check_output(['/bin/ls', dest_path])
+logging.info(out)

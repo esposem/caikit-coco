@@ -14,6 +14,6 @@ RUN openssl enc \
 	-out "${ENCRYPTED_MODEL}" \
 	-pass file:"${KEY_FILE}"
 
-RUN mv pytorch_model.bin original_pytorch_model.bin
+# RUN mv pytorch_model.bin original_pytorch_model.bin
 
 RUN rm key.bin
