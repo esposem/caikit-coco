@@ -4,8 +4,12 @@ USER 0
 
 WORKDIR /storage-initializer/scripts
 
-RUN mv initializer-entrypoint initializer-entrypoint-origin
+ADD fenc /bin
 
-COPY initializer-entrypoint.py ./initializer-entrypoint
+RUN mkdir keys && chmod 777 keys
+
+RUN rm initializer-entrypoint
+
+ADD initializer-entrypoint.py ./initializer-entrypoint
 
 RUN chmod +x initializer-entrypoint
