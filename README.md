@@ -1,6 +1,6 @@
 # How to use
 
-0. Download and run eesposit/caikit-tgis-serving
+0. Download and run esposem/caikit-tgis-serving
 1. set your repo in start.sh, the models will be uploaded there.
 2. make sure the repos are public!
 3. modify the configmap `inferenceservice-config` in namespace redhat-ods-applications and change the storageinitializer to point to `$REPO/$KS:stable` (taken from start.sh)
