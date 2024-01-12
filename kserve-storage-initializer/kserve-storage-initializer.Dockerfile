@@ -1,4 +1,4 @@
-FROM quay.io/modh/kserve-storage-initializer@sha256:d5ded56dfe3fb1c927e18dfff9a8507c97fbb34572a57e4db14a7a94a417082c
+FROM quay.io/modh/kserve-storage-initializer@sha256:cc3f0446844577249c0cd08d627a7330b52e39eecd22ae360c784e6c78f1b3f0
 
 USER 0
 

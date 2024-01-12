@@ -4,6 +4,7 @@ set -ex
 
 MINIO=minio
 KS=kserve-storage-initializer
+TAG=stable-new
 
 REPO=quay.io/eesposit
 
@@ -20,7 +21,7 @@ docker_build_and_push() {
 
 	cd $FOLDER
 	docker build -t $LOCAL_CONTAINER -f $Dockerfile . --no-cache
-	docker push $LOCAL_CONTAINER $REPO/$IMAGE:stable
+	docker push $LOCAL_CONTAINER $REPO/$IMAGE:$TAG
 	cd -
 }
 

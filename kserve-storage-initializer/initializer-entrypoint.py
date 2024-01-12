@@ -12,7 +12,7 @@ if len(sys.argv) != 3:
 src_uri = sys.argv[1]
 dest_path = sys.argv[2]
 
-model_path = f"{dest_path}/flan-t5-small-caikit/artifacts"
+model_path = f"{dest_path}/artifacts"
 key_file = f'keys/key.bin'
 model_file = f'{model_path}/pytorch_model.bin'
 encr_file = f'{model_file}.enc'
@@ -46,3 +46,6 @@ out =subprocess.check_output(['mv', decr_file, model_file])
 logging.info(out)
 out = subprocess.check_output(['/bin/ls', model_path])
 logging.info(out)
+
+# logging.info("sleep...")
+# subprocess.check_output(['sleep', '30'])
